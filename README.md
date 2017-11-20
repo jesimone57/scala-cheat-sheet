@@ -185,7 +185,7 @@ factorial(6)	// res12: BigInt = 720
 
 <pre>
 val list = List(1,2,3)
->/pre>
+</pre>
 
 ### Maps
 
