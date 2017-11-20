@@ -192,9 +192,12 @@ def factorial(x: BigInt): BigInt = if (x==0) 1 else x*factorial(x-1)
 factorial(6)	// res12: BigInt = 720
 
 // almost any name can be used as a function name.  Consider the following valid function
- def *?!(s: String): String = s.reverse
+def *?!(s: String): String = s.reverse
 
 *?!( "asdf")	// res21: String = fdsa
+
+val anyTrue = (a:Boolean, b:Boolean) => a || b
+val allTrue = (a:Boolean, b:Boolean) => a && b
 </pre>
 
 
@@ -350,6 +353,12 @@ names.foreach {
 import scala.math
 val divisors = for (i <- 3 to 1001 if i < Math.sqrt(1001)) yield(i)
 // Vector(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31)
+
+// which of the above divisors evenly divides into 1001
+val divisableBy = for (e <- divisors) yield 1001 % e == 0
+
+// is this number prime?
+val isPrime =  ! divisableBy.reduceLeft((a:Boolean, b:Boolean) => a || b)
 </pre>	
 	
 ### Classes
