@@ -19,11 +19,16 @@ Examples drawn from
 
 ### Scala variables
 <pre>
-var x = 5
-var y: Int = 6           // Explicit typing to an Int
-var w: Int = 2.3	 // error:  tyoe mismatch
-var z = 2.0              // implicitly a Double
-var a: Double = 2.0      // Explicitly a Double
+var x = 5		// Default is an Int Type
+var z = 2.0		// Default for a number with a decimal point is Double
+
+var y: Int = 6		// Explicit typing to an Int
+var a: Double = 2.0	// Explicit typing to a Double
+var a: Double = 2 	// same
+var a: = 2D		// Double
+var a: = 2d		// Double
+
+var w: Int = 2.3	// error:  tyoe mismatch
 </pre>
 
 ### Scala constants.  An immutable variable is defined with val:
@@ -89,6 +94,8 @@ var f3: Float = 3.1111111111111111111111111111111111 	// error: type mismatch;
 * Double - 64 bit IEEE 754 double-precision float
 <pre>
 var d = 1.0	// default implicit is a Double
+var d2 = 2D	// a Double
+var d3 = 3d	// a double
 var e: Double = 1.0 
 var a: Double = 1.0e100	   
 </pre>
