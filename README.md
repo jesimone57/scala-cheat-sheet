@@ -72,7 +72,7 @@ val s: Short = 32768    //  error: type mismatch;
 
 * Int	- 32 bit signed value. Range -2147483648 to 2147483647
 <pre>
-var x = 1	// implicit Int
+var x = 1		// implicit Int
 var x: Int = 1
 var x: Int = 0xff 	// the value 255 in hex
 </pre>
@@ -85,11 +85,12 @@ var a1: Long = 1
 
 * Float	- 32 bit IEEE 754 single-precision float
 <pre>
-var f: Float = 3.14159f 
+var f: Float = 3.14159f	 	
 var f2: Float = 3.14159F
+var f3: Float = 3.1111111111111111111111111111111111 	// error: type mismatch;
 </pre>
 
-* Double	- 64 bit IEEE 754 double-precision float
+* Double - 64 bit IEEE 754 double-precision float
 <pre>
 var d = 1.0	// default implicit is a Double
 var e: Double = 1.0 
@@ -123,10 +124,21 @@ def sayHello(): Unit = println("Hello!")    // no value returned.
 def sayHello2: Unit = println("Hello!")     // same.  Note: A method without parameters can be written without parens.
 </pre>
 
-* Null	- null or empty reference
-* Nothing	- The subtype of every other type; includes no values
-* Any	- The supertype of any type; any object is of type Any
-* AnyRef	- The supertype of any reference type
+* Null	- null or empty reference <p>
+Null is a subtype of all reference types (i.e. any subtype of AnyRef). 
+It has a single value identified by the keyword literal null. 
+Null is provided mostly for interoperability with other JVM languages and should almost never be used in Scala code.
+</p>
+
+* Nothing - The subtype of every other type; includes no values  <p>
+Nothing is - together with Null - at the bottom of Scala's type hierarchy.</p>
+<p>
+Nothing is a subtype of every other type (including Null); there exist no instances of this type. Although type Nothing is uninhabited, it is nevertheless useful in several ways.</p>
+<p>
+A usage  hing is the return type for methods which never return normally. One example is method error in sys, which always throws an exception.</p>
+
+* Any - The supertype of any type; any object is of type Any
+* AnyRef - The supertype of any reference type
 
 
 
