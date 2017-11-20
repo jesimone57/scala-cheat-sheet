@@ -53,8 +53,6 @@ Scala encourages us to use immutable objects:
 ### Datatypes
 
 * Byte	- 8 bit signed value. Range from -128 to 127
-abstract final class Byte extends AnyVal
-
 <pre>
 val b: Byte = 127	// ok
 val b: Byte = 0x7c	// ok. b = 124
@@ -63,8 +61,6 @@ val b: Byte = 0xdc	// error: type mismatch;
 </pre>
 
 * Short	- 16 bit signed value. Range -32768 to 32767
-abstract final class Short extends AnyVal
-
 <pre>
 val s: Short = 12	// ok
 val s: Short = 32768    //  error: type mismatch;
@@ -108,7 +104,9 @@ var aunicode: Char = '\u0061'		// unicode 'a'
 
 * String   -  A sequence of Chars in double quotes
 <pre>
-var s: String = "This string contains a \" character."
+var s: String = "This string contains a \" character."	// ok
+
+var a: String = 'asdf'	//  error: unclosed character literal
 </pre>
 
 * Boolean	- Either the literal true or the literal false
