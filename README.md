@@ -53,11 +53,21 @@ Scala encourages us to use immutable objects:
 ### Datatypes
 
 * Byte	- 8 bit signed value. Range from -128 to 127
+abstract final class Byte extends AnyVal
+
 <pre>
+val b: Byte = 127	// ok
+val b: Byte = 0x7c	// ok. b = 124
+val b: Byte = 128	// error: type mismatch;
+val b: Byte = 0xdc	// error: type mismatch;
 </pre>
 
 * Short	- 16 bit signed value. Range -32768 to 32767
+abstract final class Short extends AnyVal
+
 <pre>
+val s: Short = 12	// ok
+val s: Short = 32768    //  error: type mismatch;
 </pre>
 
 * Int	- 32 bit signed value. Range -2147483648 to 2147483647
@@ -66,6 +76,7 @@ var x = 1	// implicit Int
 var x: Int = 1
 var x: Int = 0xff 	// the value 255 in hex
 </pre>
+
 * Long	- 64 bit signed value. -9223372036854775808 to 9223372036854775807
 <pre>
 var a = 1L
@@ -122,7 +133,11 @@ def sayHello2: Unit = println("Hello!")     // same.  Note: A method without par
 ### Multiple Assignment
 
 <pre>
-	
+val (a, b) = (1, 2)	// called an extractor of a pattern-match-expression
+
+val text = "some text goes here"
+val (first, rest) = if (text.contains("z")) text.splitAt(4) else text.splitAt(7)  	// first: String = some te
+// rest: String = xt goes here
 </pre>
 
 ### Scala Collections
