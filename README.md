@@ -51,7 +51,7 @@ Scala encourages us to use immutable objects:
 
 ###  Checking The Scala Version
 <pre>
-
+val version = util.Properties.versionNumberString     	// returns version: String = 2.11.8
 </pre>
 
 
