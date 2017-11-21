@@ -226,6 +226,7 @@ str slice (1, 4)			// String = ell
 val list = List(1,2,3)
 </pre>
 
+
 ### Maps
 
 <pre>
@@ -237,13 +238,14 @@ var map = Map(234 -> 1, "b" -> 2)
 map += ("a" -> 728)
 </pre>
 
+
 ### Range
 <pre>
-val x = Range(1,5)		// x: scala.collection.immutable.Range = Range(1, 2, 3, 4)
-var numbers = 1 to 10		// numbers: scala.collection.immutable.Range.Inclusive = Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val x = Range(1,5)		// Range(1, 2, 3, 4)
+var numbers = 1 to 10		// Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
 // using a range
-numbers.filter{_ > 5}		// res4: scala.collection.immutable.IndexedSeq[Int] = Vector(6, 7, 8, 9, 10)
+numbers.filter{_ > 5}		// Vector(6, 7, 8, 9, 10)
 numbers filter{_ > 5}		// same
 </pre>
 
@@ -254,7 +256,7 @@ numbers filter{_ > 5}		// same
 var i: Set[Int] = Set(1,2,3)	// Set[Int] = Set(1, 2, 3)
 Set(1,2) subsetOf i		// Boolean = true
 
-var set = Set(1,2,2,3,4,5,1,2)	// dupes removed ... set: scala.collection.immutable.Set[Int] = Set(5, 1, 2, 3, 4)
+var set = Set(1,2,2,3,4,5,1,2)	// dupes removed ... Set(5, 1, 2, 3, 4)
 
 set += 100			// Set[Int] = Set(5, 1, 2, 3, 4, 100)
 set -= 5			// Set[Int] = Set(1, 2, 3, 4, 100)
