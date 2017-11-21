@@ -208,14 +208,17 @@ val allTrue = (a:Boolean, b:Boolean) => a && b
 
 
 ### Strings 
+Like arrays, strings are not directly sequences, but they can be converted to them, and they also support all sequence operations on strings. Here are some examples of operations you can invoke on strings.
 
 <pre>
+val str = "hello"
+str.length				// Int = 5
+str.reverse				// String = olleh
+str.map(_.toUpper)			// String = HELLO
+str drop 3 				// String = lo
+str slice (1, 4)			// String = ell
 </pre>
 
-### String Methods
-
-<pre>
-</pre>
 
 ### Lists
 
