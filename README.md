@@ -289,10 +289,19 @@ numbers filter (_ < 3)		// scala.collection.immutable.IndexedSeq[Int] = Vector(1
 numbers sortWith ((x, y) => x > y) // scala.collection.immutable.IndexedSeq[Int] = Vector(3, 2, 1)
 numbers map (_ + 1) sortWith (_ > _) 	// scala.collection.immutable.IndexedSeq[Int] = Vector(4, 3, 2)
 </pre>
-	
+
+
 ### Data Type Conversion
 
 <pre>
+15.toFloat			// Float = 15.0
+15.0.toInt			// Int = 15
+15f.toDouble			// Double = 15.0
+15L.toShort			// Short = 15
+15.123d.toLong			// Long = 15
+"15.2".toFloat			// Float = 15.2
+(1 to 3).toSet			// Set[Int] = Set(1, 2, 3)
+(1 to 3).toList			// List[Int] = List(1, 2, 3)
 </pre>
 
 ### Operator Precedence
