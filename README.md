@@ -388,9 +388,10 @@ names.foreach {
     e => println(e.toUpperCase)
 }
 
-// Example to find all the possible divisors of 1001 (excluding 2)
+// Example to find all the possible divisors of n (excluding 2)
 import scala.math
-val divisors = for (i <- 3 to 1001 by 2 if i < Math.sqrt(1001)) yield(i)	// Vector(3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31)
+val n = 101
+val divisors = for (i <- 3 to n by 2 if i < Math.sqrt(n)) yield(i)	// Vector(3, 5, 7, 9)
 
 // which of the above divisors evenly divides into 1001
 val divisableBy = for (e <- divisors) yield 1001 % e == 0
