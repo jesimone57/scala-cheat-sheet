@@ -9,10 +9,12 @@ Examples drawn from
 [https://www.tutorialspoint.com/scala/](https://www.tutorialspoint.com/scala/)
 
 ### Overview
+* The name Scala stands for "Scalable Language".
 * Everything is an object.  Scala is object oriented.
 * Every function returns a value and every value is an object, therefore every function is an object.  Scala is Functional.
 * Statically typed (Int, Boolean, Float, etc.)
 * Runs on the JVM
+* Interoperates seamlessly with all Java libraries.
 * Can execute Java code
 * Can do concurrent and synchronized processing
 
@@ -226,6 +228,10 @@ val list = List(1,2,3)
 <pre>
 val map = Map("a" -> 1, "b" -> 2)	// creates scala.collection.immutable.Map[String,Int] = Map(a -> 1, b -> 2)
 val map = Map(234 -> 1, "b" -> 2)	// creates scala.collection.immutable.Map[Any,Int] = Map(234 -> 1, b -> 2)
+
+// adding to a map
+var map = Map(234 -> 1, "b" -> 2)
+map += ("a" -> 728)
 </pre>
 
 ### Range
