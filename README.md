@@ -248,7 +248,25 @@ numbers filter{_ > 5}		// same
 ### Set
 
 <pre>
-var set = Set(1,2,2,3,4,5,1,2)	// dupes removed ... set: scala.collection.immutable.Set[Int] = Set(5, 1, 2, 3, 4)	
+var i: Set[Int] = Set(1,2,3)	// Set[Int] = Set(1, 2, 3)
+Set(1,2) subsetOf i		// Boolean = true
+
+var set = Set(1,2,2,3,4,5,1,2)	// dupes removed ... set: scala.collection.immutable.Set[Int] = Set(5, 1, 2, 3, 4)
+
+set += 100			// Set[Int] = Set(5, 1, 2, 3, 4, 100)
+set -= 5			// Set[Int] = Set(1, 2, 3, 4, 100)
+set += (10,11)			// Set[Int] = Set(10, 1, 2, 3, 11, 4, 100)
+set -= (1,2,3,4)		// Set[Int] = Set(10, 11, 100)
+set.sum				// Int = 121
+
+// is element in set?
+set(100)			// Boolean = true
+set contains 100                // same as above
+
+set(20) 			// Boolean = false
+
+// add another set
+set ++ Set(20,30,40)		// Set[Int] = Set(10, 20, 11, 40, 30, 100)
 </pre>
 
 
