@@ -461,6 +461,12 @@ person.age
 // setters
 person.name = "Fred Brown"
 person.age = 23
+
+// another way to define a class.  This one has a default constructor.
+class Person() {
+ var name = ""
+ var age = 0
+}
 </pre>
 
 ### Private, Protected and Public class members
