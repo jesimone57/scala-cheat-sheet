@@ -321,10 +321,11 @@ set ++ Set(20,30,40)              // Set[Int] = Set(10, 20, 11, 40, 30, 100)
 [Methods on Collection Classes](https://alvinalexander.com/scala/scala-collections-classes-methods-organized-category)
 
 <pre>
-var numbers = 1 to 3		// numbers: scala.collection.immutable.Range.Inclusive = Range(1, 2, 3)
+var numbers = 1 to 3      // scala.collection.immutable.Range.Inclusive = Range(1, 2, 3)
 
-numbers map(x => x + 1)		// lamda style.  res31: scala.collection.immutable.IndexedSeq[Int] = Vector(2, 3, 4)
-numbers map(_ + 1)		// scala style.  same.
+// lamda style 
+numbers map(x => x + 1)   // scala.collection.immutable.IndexedSeq[Int] = Vector(2, 3, 4)
+numbers map(_ + 1)        // scala style.  same.
 
 numbers filter (_ < 3)		// scala.collection.immutable.IndexedSeq[Int] = Vector(1, 2)
 
