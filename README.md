@@ -146,6 +146,31 @@ Class Any is the root of the Scala class hierarchy. Every class in a Scala execu
 * AnyRef - The supertype of any reference type <p>
 AnyRef is the root class of all reference types.</p>
 
+### Pattern Matching
+More powerful version of a Java switch statement
+
+<pre>
+import scala.util.Random
+
+val x: Int = Random.nextInt(10)
+
+x match {
+  case 0 => "zero"
+  case 1 => "one"
+  case 2 => "two"
+  case _ => "many"
+}
+
+// another example using a regular expression
+import scala.util.matching.Regex
+
+val numberPattern: Regex = "[0-9]".r
+
+numberPattern.findFirstMatchIn("awesomepassword") match {
+  case Some(_) => println("Password OK")
+  case None => println("Password must contain a number")
+}
+</pre>
 
 
 ### Multiple Assignment
@@ -216,11 +241,16 @@ Like arrays, strings are not directly sequences, but they can be converted to th
 
 <pre>
 val str = "hello"
-str.length				// Int = 5
-str.reverse				// String = olleh
-str.map(_.toUpper)			// String = HELLO
-str drop 3 				// String = lo
-str slice (1, 4)			// String = ell
+str.length                              // Int = 5
+str.reverse                             // String = olleh
+str.map(_.toUpper)                      // String = HELLO
+str drop 3                              // String = lo
+str take(2)                             // String = he
+str slice (1, 4)                        // String = ell
+"              hello      ".trim        // String = hello
+str.replaceAll("l", "X")                // String = heXXo
+str split("l")                          // Array[String] = Array(he, "", o)
+str.toArray                             // Array[Char] = Array(h, e, l, l, o)
 </pre>
 
 
