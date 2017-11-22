@@ -449,12 +449,18 @@ val isPrime =  ! divisableBy.reduceLeft((a:Boolean, b:Boolean) => a || b)
 
 <pre>
 // define
-class Person(val name: String, val age: Int)
+class Person(var name: String, var age: Int)
 
 // use
 val person = new Person("John Smith", 15)
+
+// getters
 person.name
 person.age
+
+// setters
+person.name = "Fred Brown"
+person.age = 23
 </pre>
 
 ### Private, Protected and Public class members
