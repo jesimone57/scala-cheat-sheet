@@ -228,6 +228,13 @@ str slice (1, 4)			// String = ell
 
 <pre>
 val list = List(1,2,3)
+
+var list = List("jack", 1, 3.0, Set(1,2,3))       // List[Any] = List(jack, 1, 3.0, Set(1, 2, 3))
+list(0)               // Any = jack
+list(1)               // Any = 1
+list(2)               // Any = 3.0
+list(3)               // Any = Set(1, 2, 3)
+list(2).toString.toFloat.toInt + 12   // Int = 15
 </pre>
 
 
@@ -299,10 +306,10 @@ numbers map (_ + 1) sortWith (_ > _) 	// scala.collection.immutable.IndexedSeq[I
 ### Data Type Conversion
 
 <pre>
-15.toFloat			// Float = 15.0
-15.0.toInt			// Int = 15
-15f.toDouble			// Double = 15.0
-15L.toShort			// Short = 15
+15.toFloat          // Float = 15.0
+15.0.toInt          // Int = 15
+15f.toDouble        // Double = 15.0
+15L.toShort         // Short = 15
 15.123d.toLong			// Long = 15
 "15.2".toFloat			// Float = 15.2
 (1 to 3).toSet			// Set[Int] = Set(1, 2, 3)
