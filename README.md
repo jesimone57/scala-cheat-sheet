@@ -162,6 +162,8 @@ val (first, rest) = if (text.contains("z")) text.splitAt(4) else text.splitAt(7)
 Colections can be mutable or immutable. Immutable is the default.
 
 * List
+* Vector
+* Array
 * Map 
 * Set
 * Seq
@@ -172,9 +174,11 @@ Colections can be mutable or immutable. Immutable is the default.
 Operators are methods with one parameter used in (dot-less)
 operator notation.  Consider the following:
 <pre>
-"a,b,c" split ","	// split takes 1 parameter and is used dotless ... res22: Array[String] = Array(a, b, c)
+// split takes 1 parameter and is used dotless
+"a,b,c" split ","             // Array[String] = Array(a, b, c)
 
-"a,b,c".split( ",")	// split called as a function. Still takes 1 parameter and a dot is used. ... res22: Array[String] = Array(a, b, c)
+// split called as a function. Still takes 1 parameter and a dot is used.
+"a,b,c".split( ",")           // Array[String] = Array(a, b, c)
 </pre>
 
 
@@ -230,8 +234,8 @@ val list = List(1,2,3)
 ### Maps
 
 <pre>
-val map = Map("a" -> 1, "b" -> 2)	// creates scala.collection.immutable.Map[String,Int] = Map(a -> 1, b -> 2)
-val map = Map(234 -> 1, "b" -> 2)	// creates scala.collection.immutable.Map[Any,Int] = Map(234 -> 1, b -> 2)
+val map = Map("a" -> 1, "b" -> 2)   // Map[String,Int] = Map(a -> 1, b -> 2)
+val map = Map(234 -> 1, "b" -> 2)   // Map[Any,Int] = Map(234 -> 1, b -> 2)
 
 // adding to a map
 var map = Map(234 -> 1, "b" -> 2)
@@ -240,38 +244,39 @@ map += ("a" -> 728)
 
 
 ### Range
+
 <pre>
-val x = Range(1,5)		// Range(1, 2, 3, 4)
-var numbers = 1 to 10		// Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+val x = Range(1,5)                // Range(1, 2, 3, 4)
+var numbers = 1 to 10             // Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
 // using a range
-numbers.filter{_ > 5}		// Vector(6, 7, 8, 9, 10)
-numbers filter{_ > 5}		// same
+numbers.filter{_ > 5}             // Vector(6, 7, 8, 9, 10)
+numbers filter{_ > 5}             // same
 </pre>
 
 
 ### Set
 
 <pre>
-var i: Set[Int] = Set(1,2,3)	// Set[Int] = Set(1, 2, 3)
-Set(1,2) subsetOf i		// Boolean = true
+var i: Set[Int] = Set(1,2,3)      // Set[Int] = Set(1, 2, 3)
+Set(1,2) subsetOf i               // Boolean = true
 
-var set = Set(1,2,2,3,4,5,1,2)	// dupes removed ... Set(5, 1, 2, 3, 4)
+var set = Set(1,2,2,3,4,5,1,2)    // dupes removed ... Set(5, 1, 2, 3, 4)
 
-set += 100			// Set[Int] = Set(5, 1, 2, 3, 4, 100)
-set -= 5			// Set[Int] = Set(1, 2, 3, 4, 100)
-set += (10,11)			// Set[Int] = Set(10, 1, 2, 3, 11, 4, 100)
-set -= (1,2,3,4)		// Set[Int] = Set(10, 11, 100)
-set.sum				// Int = 121
+set += 100                        // Set[Int] = Set(5, 1, 2, 3, 4, 100)
+set -= 5                          // Set[Int] = Set(1, 2, 3, 4, 100)
+set += (10,11)                    // Set[Int] = Set(10, 1, 2, 3, 11, 4, 100)
+set -= (1,2,3,4)                  // Set[Int] = Set(10, 11, 100)
+set.sum                           // Int = 121
 
 // is element in set?
-set(100)			// Boolean = true
-set contains 100                // same as above
+set(100                           // Boolean = true
+set contains 100                  // same as above
 
-set(20) 			// Boolean = false
+set(20)                           // Boolean = false
 
 // add another set
-set ++ Set(20,30,40)		// Set[Int] = Set(10, 20, 11, 40, 30, 100)
+set ++ Set(20,30,40)              // Set[Int] = Set(10, 20, 11, 40, 30, 100)
 </pre>
 
 
