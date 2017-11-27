@@ -481,6 +481,21 @@ class Person() {
 }
 </pre>
 
+### Creating Singletons in Scala
+* A singletion is an oject which can only have one instance.  No other instances are allowed
+* in Scala we use the object key word to define a singleton.  It is part of the language specification.
+<pre>
+// singleton definition
+object Car {
+  def f() = {
+    println("in f")
+  }
+}
+
+// usage
+Car.f       // prints "in f"
+</pre>
+
 ### Private, Protected and Public class members
 * Unlike private and protected members, it is not required to specify Public keyword for Public members.
 
