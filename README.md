@@ -20,32 +20,32 @@ Examples drawn from [https://www.tutorialspoint.com/scala/](https://www.tutorial
 ### Everything is an Object in Scala
 * there are no such thing as primitives in Scala as there are in Java, thus everything is an object
 <pre>
-println(1.toString)       // String = 1       
+println(1.toString)     // String = 1       
 </pre>
 
 ### Scala variables
 <pre>
-var x = 5		            // Default is an Int Type
-var z = 2.0		          // Default for a number with a decimal point is Double
+var x = 5               // Default is an Int Type
+var z = 2.0             // Default for a number with a decimal point is Double
 
-var y: Int = 6		      // Explicit typing to an Int
-var a: Double = 2.0	    // Explicit typing to a Double
-var a: Double = 2 	    // same
-var a: = 2D		          // Double
-var a: = 2d		          // Double
+var y: Int = 6          // Explicit typing to an Int
+var a: Double = 2.0     // Explicit typing to a Double
+var a: Double = 2       // same
+var a: = 2D             // Double
+var a: = 2d             // Double
 
-var w: Int = 2.3	      // error:  type mismatch
+var w: Int = 2.3        // error:  type mismatch
 </pre>
 
 ### Scala constants.  An immutable variable is defined with val:
 <pre>
 val x = 5
-val y: Int = 6           // Explicit typing to an Int
-val w: Int = 2.3	       // error:  tyoe mismatch
-val z = 2.0              // implicitly a Double
-val a: Double = 2.0      // Explicitly a Double
+val y: Int = 6          // Explicit typing to an Int
+val w: Int = 2.3        // error:  tyoe mismatch
+val z = 2.0             // implicitly a Double
+val a: Double = 2.0     // Explicitly a Double
 
-a = 5.0                  //  error: reassignment to val
+a = 5.0                 //  error: reassignment to val
 </pre>
 
 Scala encourages us to use immutable objects:
@@ -65,25 +65,25 @@ val version = util.Properties.versionNumberString     	// returns version: Strin
 
 * Byte	- 8 bit signed value. Range from -128 to 127
 <pre>
-val b: Byte = 127	          // ok
-val b: Byte = 0x7c	        // ok. b = 124
-val b: Byte = 128	          // error: type mismatch;
-val b: Byte = 0xdc	        // error: type mismatch;
+val b: Byte = 127           // ok
+val b: Byte = 0x7c          // ok. b = 124
+val b: Byte = 128           // error: type mismatch;
+val b: Byte = 0xdc          // error: type mismatch;
 
 var i: Byte = _             // default initial value:  Byte = 0
 </pre>
 
 * Short	- 16 bit signed value. Range -32768 to 32767
 <pre>
-val s: Short = 12	          // ok
+val s: Short = 12           // ok
 val s: Short = 32768        //  error: type mismatch;
 </pre>
 
 * Int	- 32 bit signed value. Range -2147483648 to 2147483647
 <pre>
-var x = 1		                // implicit Int
+var x = 1                   // implicit Int
 var x: Int = 1
-var x: Int = 0xff 	        // the value 255 in hex
+var x: Int = 0xff           // the value 255 in hex
 
 var i: Int = _              // default initial value:  Int = 0 
 </pre>
@@ -105,9 +105,9 @@ var i: Float = _            // default initial value:  Float = 0.0
 
 * Double - 64 bit IEEE 754 double-precision float
 <pre>
-var d = 1.0	                // default implicit is a Double
-var d2 = 2D	                // a Double
-var d3 = 3d	                // a double
+var d = 1.0                 // default implicit is a Double
+var d2 = 2D                 // a Double
+var d3 = 3d                 // a double
 var e: Double = 1.0 
 var a: Double = 1.0e100	 
 
