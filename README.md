@@ -18,7 +18,7 @@ Examples drawn from [https://www.tutorialspoint.com/scala/](https://www.tutorial
 * There are no static methods in Scala.  Note:  static methods makes code confusing and hard to test.
 
 ### Everything is an Object in Scala
-* there is no such thing as primitives in Scala as there are in Java, thus everything is an object
+* there are no such thing as primitives in Scala as there are in Java, thus everything is an object
 <pre>
 println(1.toString)       // String = 1       
 </pre>
