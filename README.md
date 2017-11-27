@@ -497,6 +497,22 @@ object Car {
 Car.f       // prints "in f"
 </pre>
 
+### Emumerations
+* Enumerations are a language feature specially useful for modeling a finite set of entities.
+* Scala, as many other languages, provides a native way to represent enumerations
+* For a more thorough examination of the subject see [Enumerations](http://pedrorijo.com/blog/scala-enums/)
+
+<pre>
+object Weekday extends Enumeration {
+  val Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday = Value
+}
+
+Weekday.withName("Monday")        // Weekday.Value = Monday
+Weekday.withName("Mondai")        // NoSuchElementException: No value found for 'Mondai'
+
+ Weekday.values     // Weekday.ValueSet = Weekday.ValueSet(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)
+</pre>
+
 ### Private, Protected and Public class members
 * Unlike private and protected members, it is not required to specify Public keyword for Public members.
 
