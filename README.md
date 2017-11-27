@@ -335,6 +335,13 @@ var numbers = 1 to 10             // Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 // using a range
 numbers.filter{_ > 5}             // Vector(6, 7, 8, 9, 10)
 numbers filter{_ > 5}             // same
+numbers.filter{_ % 2 == 0}        // IndexedSeq[Int] = Vector(2, 4, 6, 8, 10)
+
+numbers.filter(e => e > 5)        // Vector(6, 7, 8, 9, 10)
+numbers filter(e => e > 5)        // same using no dot
+numbers filter{e => e > 5}        // same using curly braces
+numbers filter{_ > 5}             // same using anonymous var _
+numbers filter(_ > 5)             // same with parens
 </pre>
 
 
