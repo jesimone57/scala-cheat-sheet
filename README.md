@@ -291,6 +291,9 @@ str.toArray                             // Array[Char] = Array(h, e, l, l, o)
 ### Tuples
 
 <pre>
+var x = Tuple3(1, 2, 3)                 // x: (Int, Int, Int) = (1,2,3)
+var x = (1, 2, 3)                       // same
+
 // define
 val tup = (1.0, 2, 3, "frank")          // tup: (Int, Int, Int, String) = (1,2,3,frank)
 
