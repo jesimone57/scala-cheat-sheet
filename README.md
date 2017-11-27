@@ -67,23 +67,27 @@ val version = util.Properties.versionNumberString     	// returns version: Strin
 
 * Byte	- 8 bit signed value. Range from -128 to 127
 <pre>
-val b: Byte = 127	// ok
-val b: Byte = 0x7c	// ok. b = 124
-val b: Byte = 128	// error: type mismatch;
-val b: Byte = 0xdc	// error: type mismatch;
+val b: Byte = 127	          // ok
+val b: Byte = 0x7c	        // ok. b = 124
+val b: Byte = 128	          // error: type mismatch;
+val b: Byte = 0xdc	        // error: type mismatch;
+
+var i: Byte = _             // default initial value:  Byte = 0
 </pre>
 
 * Short	- 16 bit signed value. Range -32768 to 32767
 <pre>
-val s: Short = 12	// ok
-val s: Short = 32768    //  error: type mismatch;
+val s: Short = 12	          // ok
+val s: Short = 32768        //  error: type mismatch;
 </pre>
 
 * Int	- 32 bit signed value. Range -2147483648 to 2147483647
 <pre>
-var x = 1		// implicit Int
+var x = 1		                // implicit Int
 var x: Int = 1
-var x: Int = 0xff 	// the value 255 in hex
+var x: Int = 0xff 	        // the value 255 in hex
+
+var i: Int = _              // default initial value:  Int = 0 
 </pre>
 
 * Long	- 64 bit signed value. -9223372036854775808 to 9223372036854775807
@@ -97,15 +101,19 @@ var a1: Long = 1
 var f: Float = 3.14159f	 	
 var f2: Float = 3.14159F
 var f3: Float = 3.1111111111111111111111111111111111 	// error: type mismatch;
+
+var i: Float = _            // default initial value:  Float = 0.0 
 </pre>
 
 * Double - 64 bit IEEE 754 double-precision float
 <pre>
-var d = 1.0	// default implicit is a Double
-var d2 = 2D	// a Double
-var d3 = 3d	// a double
+var d = 1.0	                // default implicit is a Double
+var d2 = 2D	                // a Double
+var d3 = 3d	                // a double
 var e: Double = 1.0 
-var a: Double = 1.0e100	   
+var a: Double = 1.0e100	 
+
+var i: Double = _           // default initial value:  Double = 0.0 
 </pre>
 
 * Char	- 16 bit unsigned Unicode character. Range from U+0000 to U+FFFF
@@ -121,7 +129,9 @@ var aunicode: Char = '\u0061'		// unicode 'a'
 <pre>
 var s: String = "This string contains a \" character."	// ok
 
-var a: String = 'asdf'	//  error: unclosed character literal
+var a: String = 'asdf'	  //  error: unclosed character literal
+
+var i: String = _         // default initial value:  String = null 
 </pre>
 
 * Boolean	- Either the literal true or the literal false
@@ -129,6 +139,8 @@ var a: String = 'asdf'	//  error: unclosed character literal
 var b1 = true  	// implicit type
 var b: Boolean = true
 var c: Boolean = false
+
+var b: Boolean = _        // default initial value:  Boolean = false
 </pre>
 
 * Unit	- Corresponds to no value. Like the Java void primitive.
@@ -151,6 +163,7 @@ Class Any is the root of the Scala class hierarchy. Every class in a Scala execu
 
 * AnyRef - The supertype of any reference type <p>
 AnyRef is the root class of all reference types.</p>
+
 
 ### Pattern Matching
 More powerful version of a Java switch statement
