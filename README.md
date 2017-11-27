@@ -231,28 +231,39 @@ operator notation.  Consider the following:
 </pre>
 
 
-### Functions
+### Methods
+
 * The type should be given for public or non-trivial methods.
 * Note:  you should always define a return type
 * A method without parameters can be written without parens. Note: No-parens style only for side-effect-free methods
 
 <pre>
-
 def message = "Hello World!"
-
-message		// returns  String = Hello World!
+message               // returns  String = Hello World!
 
 def factorial(x: BigInt): BigInt = if (x==0) 1 else x*factorial(x-1)
-
-factorial(6)	// res12: BigInt = 720
+factorial(6)          // res12: BigInt = 720
 
 // almost any name can be used as a function name.  Consider the following valid function
 def *?!(s: String): String = s.reverse
+*?!( "asdf")          // res21: String = fdsa
 
-*?!( "asdf")	// res21: String = fdsa
+def isUpcase2(s:String): Boolean = s == s.toUpperCase       // isUpcase2: (s: String)Boolean
+isUpcase2("ASD")      // Boolean = true
+isUpCase2("aSD")      // Boolean = false
+</pre>
+
+### Functions
+* A function may be defined using a lamda expression
+<pre>
+(s:String) => s.toUpperCase         // String => String = <function1>
 
 val anyTrue = (a:Boolean, b:Boolean) => a || b
 val allTrue = (a:Boolean, b:Boolean) => a && b
+
+val isUpCase = (s:String) => s == s.toUpperCase     // isUpCase: String => Boolean = <function1>
+isUpCase("ASD")         // Boolean = true
+isUpCase("aSD")         // Boolean = false
 </pre>
 
 
