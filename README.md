@@ -25,23 +25,23 @@ println(1.toString)       // String = 1
 
 ### Scala variables
 <pre>
-var x = 5		// Default is an Int Type
-var z = 2.0		// Default for a number with a decimal point is Double
+var x = 5		            // Default is an Int Type
+var z = 2.0		          // Default for a number with a decimal point is Double
 
-var y: Int = 6		// Explicit typing to an Int
-var a: Double = 2.0	// Explicit typing to a Double
-var a: Double = 2 	// same
-var a: = 2D		// Double
-var a: = 2d		// Double
+var y: Int = 6		      // Explicit typing to an Int
+var a: Double = 2.0	    // Explicit typing to a Double
+var a: Double = 2 	    // same
+var a: = 2D		          // Double
+var a: = 2d		          // Double
 
-var w: Int = 2.3	// error:  tyoe mismatch
+var w: Int = 2.3	      // error:  type mismatch
 </pre>
 
 ### Scala constants.  An immutable variable is defined with val:
 <pre>
 val x = 5
 val y: Int = 6           // Explicit typing to an Int
-val w: Int = 2.3	 // error:  tyoe mismatch
+val w: Int = 2.3	       // error:  tyoe mismatch
 val z = 2.0              // implicitly a Double
 val a: Double = 2.0      // Explicitly a Double
 
@@ -49,13 +49,13 @@ a = 5.0                  //  error: reassignment to val
 </pre>
 
 Scala encourages us to use immutable objects:
-* Code free of side-effects is easier to reason about
+* Code is free from side-effects and is easier to reason about
 * Pure functions can be tested easily
 * Immutable objects won’t lead to concurrency issues
 
 
 
-###  Checking The Scala Version
+### Checking the Scala Version
 <pre>
 val version = util.Properties.versionNumberString     	// returns version: String = 2.11.8
 </pre>
@@ -479,7 +479,8 @@ person.age
 person.name = "Fred Brown"
 person.age = 23
 
-// another way to define a class.  This one has a default constructor.
+// another way to define a class.  This one has a default constructor. Note: the default constructor is all of the expressions in the 
+// class outside of the methods.  These are automatically collected into a default constructor.
 class Person() {
   println("creating instance of Person ...")
   var name = ""  // code you put into the class becomes part of the "primary" constructor
