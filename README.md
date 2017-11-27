@@ -99,8 +99,8 @@ var a = 1L
 var a1: Long = 1
 </pre>
 
-* Float	- 32 bit IEEE 754 single-precision float
-Double is inferred unless the declared variable is Float or an f or F suffix is used:
+* Float	- 32 bit IEEE 754 single-precision float<p>
+Double is inferred unless the declared variable is Float or an f or F suffix is used.</p>
 <pre>
 var f: Float = 3.14159f	 	
 var f2: Float = 3.14159F
