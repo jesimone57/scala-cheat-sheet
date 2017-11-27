@@ -464,8 +464,14 @@ person.age = 23
 
 // another way to define a class.  This one has a default constructor.
 class Person() {
- var name = ""
- var age = 0
+  println("creating instance of Person ...")
+  var name = ""  // code you put into the class becomes part of the "primary" constructor
+  var age = 0    // ditto
+  
+  // auxilliary constructor.  Must call this
+  def this(name: String) = {
+    this
+  }
 }
 </pre>
 
