@@ -4,9 +4,7 @@
 
 [Scala Language Specification](https://www.scala-lang.org/files/archive/spec/2.11/)
 
-Examples drawn from 
-
-[https://www.tutorialspoint.com/scala/](https://www.tutorialspoint.com/scala/)
+Examples drawn from [https://www.tutorialspoint.com/scala/](https://www.tutorialspoint.com/scala/)
 
 ### Overview
 * The name Scala stands for "Scalable Language".
