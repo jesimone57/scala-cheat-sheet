@@ -208,6 +208,7 @@ val (first, rest) = if (text.contains("z")) text.splitAt(4) else text.splitAt(7)
 ### Scala Collections
 Colections can be mutable or immutable. Immutable is the default.
 
+* Tuple
 * List
 * Vector
 * Array
@@ -275,6 +276,16 @@ str split("l")                          // Array[String] = Array(he, "", o)
 str.toArray                             // Array[Char] = Array(h, e, l, l, o)
 </pre>
 
+### Tuples
+
+<pre>
+// define
+val tup = (1.0, 2, 3, "frank")          // tup: (Int, Int, Int, String) = (1,2,3,frank)
+
+// access
+tup._1                                  // Double = 1.0
+tup._4                                  // String = frank
+</pre>
 
 ### Lists
 
