@@ -560,6 +560,7 @@ def total3(list:  List[Int], selector: Int => Boolean) = {
 total3(List(1,2,3,4,5),  { e=> true})         // all values ... Int = 15
 total3(List(1,2,3,4,5),  { e=> e%2 == 0})     // even values ... Int = 6
 total3(List(1,2,3,4,5),  { e=> e > 3})        // values > 3 ... Int 9
+total3(List(1,2,3,4,5),  { _ <= 3})           // values <= 3 ... Int 6
 
 def total4(list: List[Int]) = { 
   list.foldLeft(0) {
@@ -567,7 +568,7 @@ def total4(list: List[Int]) = {
   }
 }
 
- total4(List(1,2,3,4,5))      // Int = 15
+total4(List(1,2,3,4,5))      // Int = 15
 </pre>
 
 ### Private, Protected and Public class members
