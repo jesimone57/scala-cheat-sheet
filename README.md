@@ -483,7 +483,8 @@ class Person() {
 
 ### Creating Singletons in Scala
 * A singletion is an oject which can only have one instance.  No other instances are allowed
-* in Scala we use the object key word to define a singleton.  It is part of the language specification.
+* In Scala we use the object key word to define a singleton.  It is part of the language specification.
+* In Scala if both a class and an object have the the same name, they are called companions and must reside in the same file.
 <pre>
 // singleton definition
 object Car {
