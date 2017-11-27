@@ -24,9 +24,9 @@ println(1.toString)     // String = 1
 </pre>
 
 ### Syntax of Arrows in Scala
-# -> is used for maps:  var map = Map("a" -> 1, "b" -> 2, "c" -> 3)
-# <- is used as a for loop index:  for (i <- 1 to 3) println(i)
-# => is used in lamba expressions:  list.foreach {e => println(e) }
+1. -> is used for maps:  var map = Map("a" -> 1, "b" -> 2, "c" -> 3)
+2. <- is used as a _for_ loop index:  for (i <- 1 to 3) println(i)
+3. => is used in lamba expressions:  list.foreach {e => println(e) }
 
 ### Scala variables
 <pre>
