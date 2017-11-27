@@ -23,6 +23,11 @@ Examples drawn from [https://www.tutorialspoint.com/scala/](https://www.tutorial
 println(1.toString)     // String = 1       
 </pre>
 
+### Syntax of Arrows in Scala
+# -> is used for maps:  var map = Map("a" -> 1, "b" -> 2, "c" -> 3)
+# <- is used as a for loop index:  for (i <- 1 to 3) println(i)
+# => is used in lamba expressions:  list.foreach {e => println(e) }
+
 ### Scala variables
 <pre>
 var x = 5               // Default is an Int Type
@@ -274,7 +279,8 @@ str.toArray                             // Array[Char] = Array(h, e, l, l, o)
 ### Lists
 
 <pre>
-val list = List(1,2,3)
+val list = List(1,2,3)          // List[Int] = List(1, 2, 3)
+list.sum                        // Int = 6
 
 var list = List("jack", 1, 3.0, Set(1,2,3))       // List[Any] = List(jack, 1, 3.0, Set(1, 2, 3))
 list(0)               // Any = jack
