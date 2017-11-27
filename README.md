@@ -501,6 +501,7 @@ Car.f       // prints "in f"
 * Enumerations are a language feature specially useful for modeling a finite set of entities.
 * Scala, as many other languages, provides a native way to represent enumerations
 * For a more thorough examination of the subject see [Enumerations](http://pedrorijo.com/blog/scala-enums/)
+* The recommendation from the above blog post is to use the [enumeratum](https://github.com/lloydmeta/enumeratum) library see 
 
 <pre>
 object Weekday extends Enumeration {
@@ -510,7 +511,63 @@ object Weekday extends Enumeration {
 Weekday.withName("Monday")        // Weekday.Value = Monday
 Weekday.withName("Mondai")        // NoSuchElementException: No value found for 'Mondai'
 
- Weekday.values     // Weekday.ValueSet = Weekday.ValueSet(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)
+Weekday.values // Weekday.ValueSet = Weekday.ValueSet(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)
+</pre>
+
+
+### Scala written in Imperative Style 
+<pre>
+// definition
+def total(list: List[Int]) = {
+  var sum = 0
+  for (i <- list) {
+    sum += i
+  }
+  sum
+}
+
+// usage
+total(List(1,2,3,4,5))        // Int = 15
+</pre>
+
+### Scala written in Functional Style 
+* We want to promote immutability
+* Assignmentless programming
+* Functions don't have side-effects
+<pre>
+def total1(list:  List[Int]) = {
+  var sum = 0
+  list.foreach { e => sum += e}
+  sum
+}
+
+total1(List(1,2,3,4,5))        // Int = 15
+
+def total2(list:  List[Int]) = {
+  var sum = 0
+  list.foreach { sum += _ }
+  sum
+}
+
+total2(List(1,2,3,4,5))        // Int = 15
+
+def total3(list:  List[Int], selector: Int => Boolean) = {
+  var sum = 0
+  list.foreach { e => if (selector(e)) sum += e }
+  sum
+}
+
+total3(List(1,2,3,4,5),  { e=> true})         // all values ... Int = 15
+total3(List(1,2,3,4,5),  { e=> e%2 == 0})     // even values ... Int = 6
+total3(List(1,2,3,4,5),  { e=> e > 3})        // values > 3 ... Int 9
+
+def total4(list: List[Int]) = { 
+  list.foldLeft(0) {
+    (carryOver, e) => carryOver + e
+  }
+}
+
+ total4(List(1,2,3,4,5))      // Int = 15
 </pre>
 
 ### Private, Protected and Public class members
