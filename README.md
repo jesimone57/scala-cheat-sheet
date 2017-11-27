@@ -256,12 +256,12 @@ isUpCase2("aSD")      // Boolean = false
 ### Functions
 * A function may be defined using a lamda expression
 <pre>
-(s:String) => s.toUpperCase         // String => String = <function1>
+(s:String) => s.toUpperCase         // String => String = &lt;function1&gt;
 
 val anyTrue = (a:Boolean, b:Boolean) => a || b
 val allTrue = (a:Boolean, b:Boolean) => a && b
 
-val isUpCase = (s:String) => s == s.toUpperCase     // isUpCase: String => Boolean = <function1>
+val isUpCase = (s:String) => s == s.toUpperCase     // isUpCase: String => Boolean = &lt;function1&gt;
 isUpCase("ASD")         // Boolean = true
 isUpCase("aSD")         // Boolean = false
 </pre>
