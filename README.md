@@ -659,7 +659,7 @@ peter.listen        // I am Peter your friend
 <pre>
 import scala.math
 
-Math.sqrt(25.0)		// returns ... res14: Double = 5.0
-Math.PI 		// returns ... res18: Double = 3.141592653589793
-Math.tan(Math.PI * 2)	// returns ... res19: Double = -2.4492935982947064E-16
+Math.sqrt(25.0)         // Double = 5.0
+Math.PI                 // Double = 3.141592653589793
+Math.tan(Math.PI * 2)   // Double = -2.4492935982947064E-16  ... almost 0
 </pre>
