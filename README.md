@@ -622,6 +622,19 @@ def total4(list: List[Int]) = {
 total4(List(1,2,3,4,5))      // Int = 15
 </pre>
 
+### Traits
+<pre>
+trait Friend {
+  val name:  String
+  def listen = println("I am "+name+" your friend")
+}
+
+class Human(val name: String) extends Friend
+
+val peter = new Human("Peter")
+peter.listen        // I am Peter your friend
+</pre>
+
 ### Private, Protected and Public class members
 * Unlike private and protected members, it is not required to specify Public keyword for Public members.
 
