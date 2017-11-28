@@ -646,19 +646,19 @@ trait Friend {
   def listen = println("I am "+name+" your friend")
 }
 
-// a class can be extended by a trait
+// first, a class can be extended by a trait
 class Human(val name: String) extends Friend
 
 val peter = new Human("Peter")
 peter.listen        // I am Peter your friend
 
-// a class can mixin a trait
+// secondly, a class can mixin a trait
 class Dog(override val name: String) extends Animal(name) with Friend
 
 val rover = new Dog("Rover")
 rover.listen      // I am Rover your friend
 
-// lastly an object can mixin a trait.   Note: No trait
+// lastly, an object can mixin a trait.   Note: No trait
 class Cat(override val name: String) extends Animal(name)
 
 // mixin trait with the object definition
