@@ -329,10 +329,26 @@ map += ("a" -> 728)
 </pre>
 
 
-### Range
+### Ranges
+* The Range class represents integer values in range \\\[start;end) with non-zero step value step. It's a special case of an indexed sequence. For example:
 
 <pre>
-val x = Range(1,5)                // Range(1, 2, 3, 4)
+val r1 = 0 until 10               // Range(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+val r2 = r1.start until r1.end by r1.step + 1     //  Range(0, 2, 4, 6, 8)
+val x = Range(1, 5)               // Range(1, 2, 3, 4)
+
+val odds = Range(1, 10, 2)        // Range(1, 3, 5, 7, 9)
+val odds = 1 to 10 by 2           // exactly same
+odds.end                          // Int 10
+odds.last                         // Int 9
+
+val evens = Range(0, 10, 2)       // Range(0, 2, 4, 6, 8)
+var evens = 0 to 10 by 2          // exactly same
+for (i <- evens) println(i)       // prints 0 2 4 6 and 8
+evens.start                       // Int = 0
+evens.end                         // Int = 10
+evens.step                        // Int = 2
+
 var numbers = 1 to 10             // Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
 // using a range
@@ -348,7 +364,7 @@ numbers filter(_ > 5)             // same with parens
 </pre>
 
 
-### Set
+### Sets
 
 <pre>
 var i: Set[Int] = Set(1,2,3)      // Set[Int] = Set(1, 2, 3)
