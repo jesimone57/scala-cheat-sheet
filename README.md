@@ -330,7 +330,7 @@ map += ("a" -> 728)
 
 
 ### Ranges
-* The Range class represents integer values in range \\\[start;end) with non-zero step value step. It's a special case of an indexed sequence. For example:
+* The Range class represents integer values in range \[start;end) with non-zero step value step. It's a special case of an indexed sequence. For example:
 
 <pre>
 val r1 = 0 until 10               // Range(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
