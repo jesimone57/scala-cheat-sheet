@@ -678,3 +678,18 @@ Math.sqrt(25.0)         // Double = 5.0
 Math.PI                 // Double = 3.141592653589793
 Math.tan(Math.PI * 2)   // Double = -2.4492935982947064E-16  ... almost 0
 </pre>
+
+### Defining a Custom Type Alias
+* Scala allows a type alias definition for custom types we wish to give name to.
+<pre>
+// suppose we have a custom type which is a List of Int and Double pairs (tuples)
+val list = List( (0 ,0.0), (1, 1.1), (2, 2.2))    //  List[(Int, Double)] = List((0,0.0), (1,1.1), (2,2.2)) 
+
+// we can define a custom type thusly
+type MyNumberPairs = List[(Int, Double)]          // defined type alias MyNumberPairs
+
+// usage
+val x: MyNumberPairs = List( (0 ,0.0), (1, 1.1), (2, 2.2))  //  MyNumberPairs = List((0,0.0), (1,1.1), (2,2.2))
+val x: MyNumberPairs = List( (0 , 0))                       // ok.     x: MyNumberPairs = List((0,0.0))
+val x: MyNumberPairs = List( (0.1, 0))                      // will be an error.  error: type mismatch;
+</pre>
