@@ -314,6 +314,14 @@ list(1)               // Any = 1
 list(2)               // Any = 3.0
 list(3)               // Any = Set(1, 2, 3)
 list(2).toString.toFloat.toInt + 12   // Int = 15
+
+// for mutable lists use ListBuffer
+import scala.collection.mutable.ListBuffer
+
+var fruits = ListBuffer[String]()
+fruits += "Apple"     // ListBuffer(Apple)
+fruits += "Banana"    // ListBuffer(Apple, Banana)
+fruits += "Orange"    // ListBuffer(Apple, Banana, Orange)
 </pre>
 
 
