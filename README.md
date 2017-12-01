@@ -701,3 +701,23 @@ val x: MyNumberPairs = List( (0 ,0.0), (1, 1.1), (2, 2.2))  //  MyNumberPairs = 
 val x: MyNumberPairs = List( (0 , 0))                       // ok.     x: MyNumberPairs = List((0,0.0))
 val x: MyNumberPairs = List( (0.1, 0))                      // will be an error.  error: type mismatch;
 </pre>
+
+### Exception Handling
+<pre>
+import java.io.FileReader
+import java.io.FileNotFoundException
+import java.io.IOException
+
+try {
+   val f = new FileReader("input.txt")
+} catch {
+
+   case ex: FileNotFoundException => {
+      println("Missing file exception")
+   }
+
+   case ex: IOException => {
+      println("IO Exception")
+   }
+}
+</pre>
