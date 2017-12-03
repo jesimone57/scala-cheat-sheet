@@ -2,7 +2,7 @@
 //
 // val primes1To100 = for (i <- 2 to 100 if isPrime(i) == true) yield(i)
 // primes1To100  // Vector(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97)
-// primes1To100.length  // Int = 24
+// primes1To100.length  // Int = 25
 //
 
 def isPrime(n: Int): Boolean = {
