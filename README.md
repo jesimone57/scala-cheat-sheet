@@ -2,7 +2,11 @@
 
 [Scala Standard Library](http://www.scala-lang.org/api/current/)
 
-[Scala Language Specification](https://www.scala-lang.org/files/archive/spec/2.11/)
+[Scala Language Specification 2.12](https://www.scala-lang.org/files/archive/spec/2.12/)
+
+[Scala Reference Documentation](https://docs.scala-lang.org/)
+
+[Scala Style Guide](https://docs.scala-lang.org/style/)
 
 Examples drawn from [https://www.tutorialspoint.com/scala/](https://www.tutorialspoint.com/scala/)
 
