@@ -266,6 +266,15 @@ isUpCase("ASD")         // Boolean = true
 isUpCase("aSD")         // Boolean = false
 </pre>
 
+### Function Values
+* Scala provides a number of different syntactic options for declaring function values. For example, the following declarations are exactly equivalent:
+<pre>
+val f1 = ((a: Int, b: Int) => a + b)
+val f2 = (a: Int, b: Int) => a + b
+val f3 = (_: Int) + (_: Int)
+val f4: (Int, Int) => Int = (_ + _)
+</pre>
+* Of these styles, the first and the last are to be preferred at all times. 
 
 ### Numbers
 * numbers may be: Short, Int, Long, Float or Double.  The default is Double.
