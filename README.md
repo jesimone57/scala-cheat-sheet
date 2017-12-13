@@ -313,6 +313,13 @@ val tup = (1.0, 2, 3, "frank")          // tup: (Int, Int, Int, String) = (1,2,3
 // access
 tup._1                                  // Double = 1.0
 tup._4                                  // String = frank
+
+val listOfTuples = List(("a", "b", "c"), ("one", "two", "three"), ("tom", "dick", "harry"))
+listOfTuples.zipWithIndex foreach { case(e, i) => println(i + ": " + e) }
+// returns ...
+// 0: (a,b,c)
+// 1: (one,two,three)
+// 2: (tom,dick,harry)
 </pre>
 
 ### Lists
