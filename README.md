@@ -208,6 +208,9 @@ val (a, b) = (1, 2)	// called an extractor of a pattern-match-expression
 val text = "some text goes here"
 val (first, rest) = if (text.contains("z")) text.splitAt(4) else text.splitAt(7)  	// first: String = some te
 // rest: String = xt goes here
+
+def someTuple = ("Al", 42, 200.0)     // someTuple: (String, Int, Double)
+val(name, age, weight) = someTuple    // name: String = Al         age: Int = 42       weight: Double = 200.0
 </pre>
 
 ### Scala Collections
