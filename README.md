@@ -551,7 +551,7 @@ val args = List("first", "second", "third")
 args.foreach((i: String) => println(i))         // passing a function to foreach 
 args.foreach(i => println(i))                   // more concise, type of the arg is inferred
 args.foreach(println(_))                        // even more consise
- args.foreach(println)                          // no need to pass an arg since println takes only 1 arg
+args.foreach(println)                           // no need to pass an arg since println takes only 1 arg
 </pre>
 
 ### Classes
