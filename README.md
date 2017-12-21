@@ -452,10 +452,6 @@ numbers map (_ + 1) sortWith (_ > _) 	// scala.collection.immutable.IndexedSeq[I
 (1 to 3).toList			// List[Int] = List(1, 2, 3)
 </pre>
 
-### Operator Precedence
-
-<pre>
-</pre>
 
 ### If statement
 
@@ -548,6 +544,15 @@ val divisableBy = for (e <- divisors) yield 1001 % e == 0
 val isPrime =  ! divisableBy.reduceLeft((a:Boolean, b:Boolean) => a || b)
 </pre>	
 
+### foreach
+<pre>
+val args = List("first", "second", "third")
+
+args.foreach((i: String) => println(i))         // passing a function to foreach 
+args.foreach(i => println(i))                   // more concise, type of the arg is inferred
+args.foreach(println(_))                        // even more consise
+ args.foreach(println)                          // no need to pass an arg since println takes only 1 arg
+</pre>
 
 ### Classes
 * Classes have public visibility by default
