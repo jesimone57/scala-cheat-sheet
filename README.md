@@ -8,6 +8,8 @@
 
 [Scala Style Guide](https://docs.scala-lang.org/style/)
 
+[Scala Fiddle](https://scalafiddle.io/) An online playground for creating, sharing and embedding Scala fiddles (little Scala programs that run directly in your browser).
+
 Examples drawn from [https://www.tutorialspoint.com/scala/](https://www.tutorialspoint.com/scala/)
 
 ### Overview
