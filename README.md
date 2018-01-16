@@ -347,6 +347,14 @@ var fruits = ListBuffer[String]()
 fruits += "Apple"     // ListBuffer(Apple)
 fruits += "Banana"    // ListBuffer(Apple, Banana)
 fruits += "Orange"    // ListBuffer(Apple, Banana, Orange)
+
+// concatenate 2 immutable lists
+val a = List(1, 2)
+val b = List(3, 4)
+val c = a ::: b       // List[Int] = List(1, 2, 3, 4)
+
+// prepend to an immutable list
+val d = 0 :: c        // List[Int] = List(0, 1, 2, 3, 4)
 </pre>
 
 
