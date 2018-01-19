@@ -199,6 +199,18 @@ numberPattern.findFirstMatchIn("awesomepassword") match {
   case Some(_) => println("Password OK")
   case None => println("Password must contain a number")
 }
+
+// some more examples ...
+(someList: List[T]) match {
+  case Nil => ...          // empty list
+  case x :: Nil => ...     // list with only one element
+  case List(x) => ...      // same as above
+  case x :: xs => ...      // a list with at least one element. x is bound to the head,
+                           // xs to the tail. xs could be Nil or some other list.
+  case 1 :: 2 :: cs => ... // lists that starts with 1 and then 2
+  case (x, y) :: ps => ... // a list where the head element is a pair
+  case _ => ...            // default case if none of the above matches
+}
 </pre>
 
 
