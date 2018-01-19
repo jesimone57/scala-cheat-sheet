@@ -275,7 +275,7 @@ isUpCase("ASD")         // Boolean = true
 isUpCase("aSD")         // Boolean = false
 
 // functions taking multiple arguments
-def multParms(parms: Int*) = {
+def multParms(parms: Int*) = {    // parms is a sequence of int, containing a varying number of arguments
   for (i <- parms) println(i)
 }
 multParms(5,4,3,2,1)
