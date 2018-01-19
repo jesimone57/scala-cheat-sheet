@@ -273,6 +273,13 @@ val allTrue = (a:Boolean, b:Boolean) => a && b
 val isUpCase = (s:String) => s == s.toUpperCase     // isUpCase: String => Boolean = &lt;function1&gt;
 isUpCase("ASD")         // Boolean = true
 isUpCase("aSD")         // Boolean = false
+
+// functions taking multiple arguments
+def multParms(parms: Int*) = {
+  for (i <- parms) println(i)
+}
+multParms(5,4,3,2,1)
+multParms(1, 2, 3)
 </pre>
 
 ### Function Values
