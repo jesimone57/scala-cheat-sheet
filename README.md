@@ -315,16 +315,24 @@ Like arrays, strings are not directly sequences, but they can be converted to th
 
 <pre>
 val str = "hello"
+
 str.length                              // Int = 5
 str.reverse                             // String = olleh
 str.map(_.toUpper)                      // String = HELLO
+str.toUpperCase                         // String = HELLO
 str drop 3                              // String = lo
 str take(2)                             // String = he
 str slice (1, 4)                        // String = ell
 "              hello      ".trim        // String = hello
 str.replaceAll("l", "X")                // String = heXXo
+str.replace('l', 'C')                   // String = heCCo
 str split("l")                          // Array[String] = Array(he, "", o)
 str.toArray                             // Array[Char] = Array(h, e, l, l, o)
+str.isEmpty                             // Boolean = false
+str.capitalize                          // String = Hello
+str.startsWith("h")                     // Boolean = true
+str.endsWith("o")                       // Boolean = true
+str.contains("ll")                      // Boolean = true
 </pre>
 
 ### Tuples
