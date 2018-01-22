@@ -68,7 +68,9 @@ Scala encourages us to use immutable objects:
 
 ### Checking the Scala Version
 <pre>
-val version = util.Properties.versionNumberString     	// returns version: String = 2.11.8
+val version = util.Properties.versionNumberString     	// returns version: String = 2.12.4
+val versionArray = version.split("\\.")                 // split takes a regexp so we need to escape the .
+                                                        // Array[String] = Array(2, 12, 4)
 </pre>
 
 
