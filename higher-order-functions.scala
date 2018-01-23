@@ -37,3 +37,6 @@ sumCubes2(1,3)      // same
 sumFactorials(1,4)  // returns Int = 33
 sumFactorials2(1,4) // same
 
+// summation with anonymous functions
+def sumInts3(a: Int, b: Int):  Int = sum(x => x, a, b)
+def sumCubes3(a: Int, b: Int): Int = sum(x => x * x * x, a, b)
