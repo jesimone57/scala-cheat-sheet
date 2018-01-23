@@ -312,6 +312,7 @@ val f4: (Int, Int) => Int = (_ + _)
 
 ### Strings 
 Like arrays, strings are not directly sequences, but they can be converted to them, and they also support all sequence operations on strings. Here are some examples of operations you can invoke on strings.
+[Alvin Alexander's String Examples](https://alvinalexander.com/scala/scala-string-examples-collection-cheat-sheet)
 
 <pre>
 val str = "hello"
