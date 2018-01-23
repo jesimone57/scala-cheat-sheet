@@ -74,7 +74,6 @@ sum(x => x * x * x)(1, 3)           // returnx Int 36
 sumCubes4(1,3)                      // same
 
 sum(factorial)(1,4)                 // returns Int 33
-
 sumFactorials4(1,4)                 // same
 
 
