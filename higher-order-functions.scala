@@ -40,3 +40,25 @@ sumFactorials2(1,4) // same
 // summation with anonymous functions
 def sumInts3(a: Int, b: Int):  Int = sum(x => x, a, b)
 def sumCubes3(a: Int, b: Int): Int = sum(x => x * x * x, a, b)
+
+// redefine sum to take a function and return a function
+def sum(f: Int => Int): (Int, Int) => Int = {
+  def sumF(a: Int, b: Int): Int = if (a > b) 0 else f(a) + sumF(a + 1, b)
+  sumF
+}
+
+def sumInts4 = sum(x => x)          // returns an identity function
+def sumCubes4 = sum(x => x * x * x) // returns a cube function
+def sumFactorials4 = sum(factorial) // returns a factorial function
+
+// now we can compose functions with functions
+sum(x => x) (1,10)                  // returns Int = 55
+sumInts4(1,10)                      // same
+
+sum(x => x * x * x)(1, 3)           // returnx Int 36
+sumCubes4(1,3)                      // same
+
+sum(factorial)(1,4)                 // returns Int 33
+sumFactorials4(1,4)                 // same
+
+
