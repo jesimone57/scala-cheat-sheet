@@ -1,6 +1,7 @@
 // Calculate the square root of a number using Newton's method
 //   1. start with an initial guess of 1
-//   2. improve the guess until we converge on the answer
+//   2. if we are close enough to the answer, then stop and return the guess as "good enough"
+//   3. else improve the guess until we converge on the answer
 
 def abs(x: Double): Double = if (x<0) -x else x
 
@@ -13,4 +14,9 @@ def sqrtIter(guess: Double, x: Double): Double = {
   if (isGoodEnough(guess, x)) guess else sqrtIter(improve(guess, x), x)
 }
 
-sqrtIter(1, 2)
+def sqrt(x: Double) = sqrtIter(1.0, x)
+
+sqrt(2)
+sqrt(4)
+sqrt(9)
+
