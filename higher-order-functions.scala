@@ -1,5 +1,6 @@
 
-// This example code taken from Martin Odersky's Scala course on Coursera Lecture 2.1 - Summing with Higher Order Functions
+// This example code taken from Martin Odersky's Functional Programming Principles in Scala course on Coursera https://www.coursera.org
+// Lecture 2.1 - Summing with Higher Order Functions
 
 //-------------------------------------------------------------------------------
 // Example 1 - no functions (note: a function takes a type and returns a type)
