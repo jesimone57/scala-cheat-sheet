@@ -1,7 +1,7 @@
 // This example code taken from Martin Odersky's Functional Programming Principles in Scala course on Coursera https://www.coursera.org
 // Lecture 1.5 - Example: square roots with Newton's method
 
-// Calculate the square root of a number using Newton's method
+// The classical way to calculate the square root of a number is by using successive approximations using Newton's method
 //   1. start with an initial guess of 1
 //   2. if we are close enough to the answer, then stop and return the guess as "good enough"
 //   3. else improve the guess until we converge on the answer
