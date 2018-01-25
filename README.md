@@ -217,7 +217,6 @@ numberPattern.findFirstMatchIn("awesomepassword") match {
 
 
 ### Multiple Assignment
-
 <pre>
 val (a, b) = (1, 2)	// called an extractor of a pattern-match-expression
 
@@ -228,6 +227,7 @@ val (first, rest) = if (text.contains("z")) text.splitAt(4) else text.splitAt(7)
 def someTuple = ("Al", 42, 200.0)     // someTuple: (String, Int, Double)
 val(name, age, weight) = someTuple    // name: String = Al         age: Int = 42       weight: Double = 200.0
 </pre>
+
 
 ### Scala Collections
 Colections can be mutable or immutable. Immutable is the default.
@@ -242,6 +242,7 @@ Colections can be mutable or immutable. Immutable is the default.
 * SortedSeq
 * SortedMap
 
+
 ### Operators
 Operators are methods with one parameter used in (dot-less)
 operator notation.  Consider the following:
@@ -255,7 +256,6 @@ operator notation.  Consider the following:
 
 
 ### Methods
-
 * The type should be given for public or non-trivial methods.
 * Note:  you should always define a return type
 * A method without parameters can be written without parens. Note: No-parens style only for side-effect-free methods
@@ -276,6 +276,7 @@ isUpcase2("ASD")      // Boolean = true
 isUpCase2("aSD")      // Boolean = false
 </pre>
 
+
 ### Functions
 * A function may be defined using a lamda expression
 <pre>
@@ -292,9 +293,10 @@ isUpCase("aSD")         // Boolean = false
 def multParms(parms: Int*) = {    // parms is a sequence of int, containing a varying number of arguments
   for (i <- parms) println(i)
 }
-multParms(5,4,3,2,1)
+multParms(5, 4, 3, 2, 1)
 multParms(1, 2, 3)
 </pre>
+
 
 ### Function Values
 * Scala provides a number of different syntactic options for declaring function values. For example, the following declarations are exactly equivalent:
@@ -305,6 +307,7 @@ val f3 = (_: Int) + (_: Int)
 val f4: (Int, Int) => Int = (_ + _)
 </pre>
 * Of these styles, the first and the last are to be preferred at all times. 
+
 
 ### Numbers
 * numbers may be: Short, Int, Long, Float or Double.  The default is Double.
@@ -337,8 +340,8 @@ str.endsWith("o")                       // Boolean = true
 str.contains("ll")                      // Boolean = true
 </pre>
 
-### Tuples
 
+### Tuples
 <pre>
 var x = Tuple3(1, 2, 3)                 // x: (Int, Int, Int) = (1,2,3)
 var x = (1, 2, 3)                       // same
@@ -358,8 +361,8 @@ listOfTuples.zipWithIndex foreach { case(e, i) => println(i + ": " + e) }
 // 2: (tom,dick,harry)
 </pre>
 
-### Lists
 
+### Lists
 <pre>
 val list = List(1,2,3)          // List[Int] = List(1, 2, 3)
 list.sum                        // Int = 6
@@ -390,7 +393,6 @@ val d = 0 :: c        // List[Int] = List(0, 1, 2, 3, 4)
 
 
 ### Maps
-
 <pre>
 val map = Map("a" -> 1, "b" -> 2)   // Map[String,Int] = Map(a -> 1, b -> 2)
 val map = Map(234 -> 1, "b" -> 2)   // Map[Any,Int] = Map(234 -> 1, b -> 2)
@@ -437,7 +439,6 @@ numbers filter(_ > 5)             // same with parens
 
 
 ### Sets
-
 <pre>
 var i: Set[Int] = Set(1,2,3)      // Set[Int] = Set(1, 2, 3)
 Set(1,2) subsetOf i               // Boolean = true
@@ -479,7 +480,6 @@ numbers map (_ + 1) sortWith (_ > _) 	// scala.collection.immutable.IndexedSeq[I
 
 
 ### Data Type Conversion
-
 <pre>
 15.toFloat          // Float = 15.0
 15.0.toInt          // Int = 15
@@ -493,7 +493,6 @@ numbers map (_ + 1) sortWith (_ > _) 	// scala.collection.immutable.IndexedSeq[I
 
 
 ### If statement
-
 <pre>
 var x = 10
 
@@ -506,10 +505,12 @@ if (x == 10){
 } else {
   println("x is not 10")
 }
+
+if (x == 10) println("x is 10") else println("x is not 10")
 </pre>
 
-### Multiline If
 
+### Multiline If
 <pre>
 var x = 10
 
@@ -583,6 +584,7 @@ val divisableBy = for (e <- divisors) yield 1001 % e == 0
 val isPrime =  ! divisableBy.reduceLeft((a:Boolean, b:Boolean) => a || b)
 </pre>	
 
+
 ### foreach
 <pre>
 val args = List("first", "second", "third")
@@ -592,6 +594,7 @@ args.foreach(i => println(i))                   // more concise, type of the arg
 args.foreach(println(_))                        // even more consise
 args.foreach(println)                           // no need to pass an arg since println takes only 1 arg
 </pre>
+
 
 ### Classes
 * Classes have public visibility by default
@@ -625,6 +628,7 @@ class Person() {
 }
 </pre>
 
+
 ### Creating Singletons in Scala
 * A singletion is an oject which can only have one instance.  No other instances are allowed
 * In Scala we use the object key word to define a singleton.  It is part of the language specification.
@@ -640,6 +644,7 @@ object Car {
 // usage
 Car.f       // prints "in f"
 </pre>
+
 
 ### Emumerations
 * Enumerations are a language feature specially useful for modeling a finite set of entities.
@@ -673,6 +678,7 @@ def total(list: List[Int]) = {
 // usage
 total(List(1,2,3,4,5))        // Int = 15
 </pre>
+
 
 ### Scala written in Functional Style 
 * We want to promote immutability
@@ -715,6 +721,7 @@ def total4(list: List[Int]) = {
 total4(List(1,2,3,4,5))      // Int = 15
 </pre>
 
+
 ### Traits
 * Traits can be used in several ways which are show below.  First, they can extends a class.  Secondly, they can be mixed in with a class definition using the with keyword.  Lastly, they can be mixed in to an object definition using the with keyword.
 <pre>
@@ -743,8 +750,10 @@ val fluffy = new Cat("Fluffy") with Friend
 fluffy.listen     // I am Fluffy your friend
 </pre>
 
+
 ### Private, Protected and Public class members
 * Unlike private and protected members, it is not required to specify Public keyword for Public members.
+
 
 ### Import Libraries
 [Scala math package API docs](http://www.scala-lang.org/api/2.11.8/index.html#scala.math.package)
@@ -755,6 +764,7 @@ Math.sqrt(25.0)         // Double = 5.0
 Math.PI                 // Double = 3.141592653589793
 Math.tan(Math.PI * 2)   // Double = -2.4492935982947064E-16  ... almost 0
 </pre>
+
 
 ### Defining a Custom Type Alias
 * Scala allows a type alias definition for custom types we wish to give name to.
@@ -770,6 +780,7 @@ val x: MyNumberPairs = List( (0 ,0.0), (1, 1.1), (2, 2.2))  //  MyNumberPairs = 
 val x: MyNumberPairs = List( (0 , 0))                       // ok.     x: MyNumberPairs = List((0,0.0))
 val x: MyNumberPairs = List( (0.1, 0))                      // will be an error.  error: type mismatch;
 </pre>
+
 
 ### Exception Handling
 <pre>
