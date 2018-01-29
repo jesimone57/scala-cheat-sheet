@@ -256,6 +256,7 @@ operator notation.  Consider the following:
 
 
 ### Methods
+* Methods are just functions defined in classes
 * The type should be given for public or non-trivial methods.
 * Note:  you should always define a return type
 * A method without parameters can be written without parens. Note: No-parens style only for side-effect-free methods
