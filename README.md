@@ -177,6 +177,10 @@ Class Any is the root of the Scala class hierarchy. Every class in a Scala execu
 AnyRef is the root class of all reference types.</p>
 
 
+### Class Hierarchy
+![Scala Class Hierarchy](../master/Scala%2Bclass%2Bhierarchy.jpg)
+
+
 ### Pattern Matching
 More powerful version of a Java switch statement
 
