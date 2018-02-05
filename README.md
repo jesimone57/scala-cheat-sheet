@@ -172,6 +172,7 @@ Nothing is - together with Null - at the bottom of Scala's type hierarchy.  Noth
 
 * Any - The supertype of any type; any object is of type Any <p>
 Class Any is the root of the Scala class hierarchy. Every class in a Scala execution environment inherits directly or indirectly from this class. Class Any has two direct subclasses: AnyRef and AnyVal.</p>
+<p>Methods include '==', '!=', 'equals', 'hashCode' and 'toString'</p?
 
 * AnyRef - The supertype of any reference type <p>
 AnyRef is the root class of all reference types.</p>
