@@ -728,7 +728,9 @@ total4(List(1,2,3,4,5))      // Int = 15
 
 
 ### Traits
-* Traits can be used in several ways which are show below.  First, they can extends a class.  Secondly, they can be mixed in with a class definition using the with keyword.  Lastly, they can be mixed in to an object definition using the with keyword.
+* Traits resemble interfaces in Java.  They can contain both abstract and concrete methods.
+* Traits differ from classes in that traits cannot have (value) parameters.  Only classes can have parameters.
+* Traits can be used in several ways which are shown below.  First, they can extends a class.  Secondly, they can be mixed in with a class definition using the with keyword.  Lastly, they can be mixed in to an object definition using the with keyword.
 <pre>
 trait Friend {
   val name:  String
