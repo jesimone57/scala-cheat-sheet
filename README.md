@@ -171,8 +171,8 @@ Null is provided mostly for interoperability with other JVM languages and should
 Nothing is - together with Null - at the bottom of Scala's type hierarchy.  Nothing is a subtype of every other type (including Null); there exist no instances of this type. Although type Nothing is uninhabited, it is nevertheless useful in several ways.  A usage for Nothing is the return type for methods which never return normally. One example is method error in sys, which always throws an exception.</p>
 
 * Any - The supertype of any type; any object is of type Any <p>
-Class Any is the root of the Scala class hierarchy. Every class in a Scala execution environment inherits directly or indirectly from this class. Class Any has two direct subclasses: AnyRef and AnyVal.</p>
-<p>Methods include '==', '!=', 'equals', 'hashCode' and 'toString'</p?
+Class Any is the root of the Scala class hierarchy. Every class in a Scala execution environment inherits directly or indirectly from this class. Class Any has two direct subclasses: AnyRef and AnyVal.<br>
+Methods include '==', '!=', 'equals', 'hashCode' and 'toString'</p?
 
 * AnyRef - The supertype of any reference type <p>
 AnyRef is the root class of all reference types.</p>
