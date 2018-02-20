@@ -286,8 +286,16 @@ isUpCase2("aSD")      // Boolean = false
 
 
 ### Functions
+* The function type A => B is just an abbreviation for the class scala.Function1[A,B] which is roughly defined as
+<pre>
+package scala
+trait Function1[A,B] {
+  def apply(x: A): B
+</pre>
+* Functions are objects with apply methods
 * A function may be defined using a lamda expression
 <pre>
+(x: Int) => x * x                   // anonymous square function
 (s:String) => s.toUpperCase         // String => String = &lt;function1&gt;
 
 val anyTrue = (a:Boolean, b:Boolean) => a || b
