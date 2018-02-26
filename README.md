@@ -379,7 +379,11 @@ listOfTuples.zipWithIndex foreach { case(e, i) => println(i + ": " + e) }
 
 
 ### Lists
+* Lists are immutable.  The elements of a List cannot be changed.
+* Lists are recursive, while Arrays are flat.
+* All Lists in Scala are constructed from the empty list Nil using the construction operations :: (cons)
 <pre>
+val nums = 1 :: (2 :: (3 :: Nil))   // exactly same as List(1, 2, 3)
 val list = List(1,2,3)          // List[Int] = List(1, 2, 3)
 list.sum                        // Int = 6
 
