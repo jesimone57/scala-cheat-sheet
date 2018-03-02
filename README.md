@@ -651,6 +651,7 @@ class Person() {
 
 ### Implicit Classes
 * allows the creation of infix methods
+
 <pre>
 implicit class RichInt(val x: Int) {
     def isAFactorOf(y: Int) = y % x == 0
@@ -673,7 +674,7 @@ val s: String = null
 
 s takeN 2               // String = null
 s take 2                // null pointer exception
-</pre
+</pre>
 
 
 ### Creating Singletons in Scala
