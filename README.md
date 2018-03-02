@@ -649,6 +649,33 @@ class Person() {
 </pre>
 
 
+### Implicit Classes
+* allows the creation of infix methods
+<pre>
+implicit class RichInt(val x: Int) {
+    def isAFactorOf(y: Int) = y % x == 0
+}
+ 
+2.isAFactorOf(10)       // true
+2 isAFactorOf 10        // true
+2 isAFactorOf 12        // true
+2 isAFactorOf 13        // false
+
+implicit class StringUtil(val s: String) {
+    def takeN(len: Int) =
+        if (len > 0 && s != null && s.length > len) s.take(len) else s
+}
+
+"abcd" takeN 2          // String = "ab"
+"abcd" take 50          // String = "abcd"
+
+val s: String = null
+
+s takeN 2               // String = null
+s take 2                // null pointer exception
+</pre
+
+
 ### Creating Singletons in Scala
 * A singletion is an oject which can only have one instance.  No other instances are allowed
 * In Scala we use the object key word to define a singleton.  It is part of the language specification.
