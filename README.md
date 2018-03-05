@@ -650,28 +650,34 @@ class Person() {
 
 
 ### Implicit Classes
-* allows the creation of infix methods
+* allows adding methods to an object without modifying the source code of the object 
+* also commonly known as extension methods
+* allows for the creation of infix methods
+* must always be defined in an object, class or trait
 
 <pre>
-implicit class RichInt(val x: Int) {
-    def isAFactorOf(y: Int) = y % x == 0
+object Helpers {
+  implicit class RichInt(val x: Int) {
+      def isAFactorOf(y: Int) = y % x == 0
+  }
+
+  implicit class StringUtil(val s: String) {
+     def takeN(len: Int) =
+        if (len > 0 && s != null && s.length > len) s.take(len) else s
+  }
 }
+
+import Helpers._
  
 2.isAFactorOf(10)       // true
 2 isAFactorOf 10        // true
 2 isAFactorOf 12        // true
 2 isAFactorOf 13        // false
 
-implicit class StringUtil(val s: String) {
-    def takeN(len: Int) =
-        if (len > 0 && s != null && s.length > len) s.take(len) else s
-}
-
 "abcd" takeN 2          // String = "ab"
 "abcd" take 50          // String = "abcd"
 
 val s: String = null
-
 s takeN 2               // String = null
 s take 2                // null pointer exception
 </pre>
