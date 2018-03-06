@@ -12,6 +12,7 @@
 
 Examples drawn from [https://www.tutorialspoint.com/scala/](https://www.tutorialspoint.com/scala/)
 
+
 ### Overview
 * The name Scala stands for "Scalable Language".
 * Everything is an object.  Scala is object oriented.
@@ -23,16 +24,19 @@ Examples drawn from [https://www.tutorialspoint.com/scala/](https://www.tutorial
 * Can do concurrent and synchronized processing
 * There are no static methods in Scala.  Note:  static methods makes code confusing and hard to test.
 
+
 ### Everything is an Object in Scala
 * there are no such thing as primitives in Scala as there are in Java, thus everything is an object
 <pre>
 println(1.toString)     // String = 1       
 </pre>
 
+
 ### Syntax of Arrows in Scala
 1. -> is used for maps:  var map = Map("a" -> 1, "b" -> 2, "c" -> 3)
 2. <- is used as a _for_ loop index:  for (i <- 1 to 3) println(i)
 3. => is used in lamba expressions:  list.foreach {e => println(e) }
+
 
 ### Scala variables
 <pre>
@@ -47,6 +51,7 @@ var a: = 2d             // Double
 
 var w: Int = 2.3        // error:  type mismatch
 </pre>
+
 
 ### Scala constants.  An immutable variable is defined with val:
 <pre>
@@ -63,7 +68,6 @@ Scala encourages us to use immutable objects:
 * Code is free from side-effects and is easier to reason about
 * Pure functions can be tested easily
 * Immutable objects won’t lead to concurrency issues
-
 
 
 ### Checking the Scala Version
@@ -692,13 +696,13 @@ s take 2                // null pointer exception
 [Review of Case Classes](https://alvinalexander.com/scala/fp-book/quick-review-of-scala-case-classes)
 
 * A case class generates a lot of code for you with the following benefits:
-** An apply method so you don't need to use the new keyword to create a new instance of the class
-** Accessor methods are generated for each case class constructor parameter.  All are public val fields by default
-** mutator methods would also be generated for all constructor parameters declared as var
-** An unapply method is generated which makes it easy to use case classes in match expressions
-** A copy method is generated
-** equals and hashcode methods are generated which lets you compare objects and easily use them as keys in maps and sets
-** a default toString method is generated which is helpful for debugging
+ * An apply method so you don't need to use the new keyword to create a new instance of the class
+ * Accessor methods are generated for each case class constructor parameter.  All are public val fields by default
+ * mutator methods would also be generated for all constructor parameters declared as var
+ * An unapply method is generated which makes it easy to use case classes in match expressions
+ * A copy method is generated
+ * equals and hashcode methods are generated which lets you compare objects and easily use them as keys in maps and sets
+ * a default toString method is generated which is helpful for debugging
 
 <pre>
 case class Person(name: String, relation: String)
