@@ -653,10 +653,13 @@ class Person() {
 * allows adding methods to an object without modifying the source code of the object 
 * also commonly known as extension methods
 * allows for the creation of infix methods
-* must always be defined in an object, class or trait
+* They must be defined inside of another trail, class or object
+* They may only take one non-implicit argument in their constructor
+* There may not be any method, member or object in scope with the same name as the implicit class
 
 <pre>
 object Helpers {
+
   implicit class RichInt(val x: Int) {
       def isAFactorOf(y: Int) = y % x == 0
   }
