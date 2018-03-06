@@ -696,13 +696,13 @@ s take 2                // null pointer exception
 [Review of Case Classes](https://alvinalexander.com/scala/fp-book/quick-review-of-scala-case-classes)
 
 * A case class generates a lot of code for you with the following benefits:
- * An apply method so you don't need to use the new keyword to create a new instance of the class
- * Accessor methods are generated for each case class constructor parameter.  All are public val fields by default
- * mutator methods would also be generated for all constructor parameters declared as var
- * An unapply method is generated which makes it easy to use case classes in match expressions
- * A copy method is generated
- * equals and hashcode methods are generated which lets you compare objects and easily use them as keys in maps and sets
- * a default toString method is generated which is helpful for debugging
+    * An apply method so you don't need to use the new keyword to create a new instance of the class
+    * Accessor methods are generated for each case class constructor parameter.  All are public val fields by default
+    * mutator methods would also be generated for all constructor parameters declared as var
+    * An unapply method is generated which makes it easy to use case classes in match expressions
+    * A copy method is generated
+    * equals and hashcode methods are generated which lets you compare objects and easily use them as keys in maps and sets
+    * a default toString method is generated which is helpful for debugging
 
 <pre>
 case class Person(name: String, relation: String)
