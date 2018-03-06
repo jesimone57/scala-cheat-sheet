@@ -650,6 +650,8 @@ class Person() {
 
 
 ### Implicit Classes
+[Implicit Method Examples and Syntax](https://alvinalexander.com/scala/scala-2.10-implicit-class-example) 
+
 * allows adding methods to an object without modifying the source code of the object 
 * also commonly known as extension methods
 * allows for the creation of infix methods
