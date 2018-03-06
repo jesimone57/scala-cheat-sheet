@@ -688,6 +688,43 @@ s take 2                // null pointer exception
 </pre>
 
 
+### Case Classes
+[Review of Case Classes](https://alvinalexander.com/scala/fp-book/quick-review-of-scala-case-classes)
+
+* A case class generates a lot of code for you with the following benefits:
+** An apply method so you don't need to use the new keyword to create a new instance of the class
+** Accessor methods are generated for each case class constructor parameter.  All are public val fields by default
+** mutator methods would also be generated for all constructor parameters declared as var
+** An unapply method is generated which makes it easy to use case classes in match expressions
+** A copy method is generated
+** equals and hashcode methods are generated which lets you compare objects and easily use them as keys in maps and sets
+** a default toString method is generated which is helpful for debugging
+
+<pre>
+case class Person(name: String, relation: String)
+val frank = Person("Frank Brown", "uncle")              // no need for new keyword
+frank                                                   // prints Person(Frank Brown,uncle)
+frank.name                                              // String = Frank Brown
+frank  match { case Person(n, r) => println(n, r) }     // (Frank Brown,uncle)
+val unc = Person("Frank Brown", "uncle")
+unc == frank                                            // true
+frank.hashCode                                          // Int = 1926139159
+unc.hashCode                                            // same Int = 1926139159
+
+// Let's try with a non-case class so we can plainly see the differences since we did not get any generated methods:
+
+class Person2(name: String, relation: String)
+val jane = new Person2("Jane Smith", "aunt")            // must use keyword new to create an instance
+jane                                                    // no default toString method. instead we get Person2@75d454a4
+jane.name                                               // no accessors instead we get error: value name is not a member of Person2
+jane  match { case Person(n, r) => println(n, r) }      // error: constructor cannot be instantiated to expected type;
+val aunt = new Person2("Jane Smith", "aunt")            
+jane == aunt                                            // false,  since we have no equals or hashcode 
+jane.hashCode                                           // Int = 1976849572
+aunt.hashCode                                           // different Int = 555428396
+</pre>
+
+
 ### Creating Singletons in Scala
 * A singletion is an oject which can only have one instance.  No other instances are allowed
 * In Scala we use the object key word to define a singleton.  It is part of the language specification.
