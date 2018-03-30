@@ -387,9 +387,14 @@ listOfTuples.zipWithIndex foreach { case(e, i) => println(i + ": " + e) }
 * Lists are recursive, while Arrays are flat.
 * All Lists in Scala are constructed from the empty list Nil using the construction operations :: (cons)
 <pre>
-val nums = 1 :: (2 :: (3 :: Nil))   // exactly same as List(1, 2, 3)
-val list = List(1,2,3)          // List[Int] = List(1, 2, 3)
-list.sum                        // Int = 6
+1 :: List(2,3)                      // List[Int] = List(1, 2, 3)
+val nums = 1 :: (2 :: (3 :: Nil))   // List[Int] = List(1, 2, 3)
+
+nums.reduceLeft(_ + _)              // (1 + 2) + 3 = 6
+nums.foldLeft(0)(_ + _)             // (((0 + 1) + 2) + 3) = 6
+
+val list = List(1,2,3)              // List[Int] = List(1, 2, 3)
+list.sum                            // Int = 6
 
 var list = List("jack", 1, 3.0, Set(1,2,3))       // List[Any] = List(jack, 1, 3.0, Set(1, 2, 3))
 list(0)               // Any = jack
