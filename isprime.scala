@@ -11,5 +11,5 @@ def isPrime(n: Int): Boolean = {
   val oddDivisors = for (i <- 3 to n by 2 if i <= Math.sqrt(n)) yield(i)
   val divisors = Vector(2) ++ oddDivisors
   val divisableBy = for (d <- divisors if n>1) yield n>d && n%d == 0
-  if (divisableBy.isEmpty) false else ! divisableBy.reduceLeft((a:Boolean, b:Boolean) => a || b)
+  if (divisableBy.isEmpty) false else ! divisableBy.reduceLeft(_ || _)
 }
