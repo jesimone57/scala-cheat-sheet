@@ -433,6 +433,7 @@ map += ("a" -> 728)
 
 
 ### Ranges
+* A Range is a sequence of evenly spaced integers.
 * The Range class represents integer values in range \[start;end) with non-zero step value step. It's a special case of an indexed sequence. For example:
 
 <pre>
