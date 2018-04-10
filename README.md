@@ -469,8 +469,12 @@ numbers filter(_ > 5)             // same with parens
 
 
 ### Sets
+* Sets are unordered.  They do not have a predefined order.
+* Sets do not have duplicate elements
+* The fundamental operation on Sets is contains
+
 <pre>
-var i: Set[Int] = Set(1,2,3)      // Set[Int] = Set(1, 2, 3)
+val i = Set(1,2,3)                // Set[Int] = Set(1, 2, 3)
 Set(1,2) subsetOf i               // Boolean = true
 
 var set = Set(1,2,2,3,4,5,1,2)    // dupes removed ... Set(5, 1, 2, 3, 4)
@@ -482,9 +486,9 @@ set -= (1,2,3,4)                  // Set[Int] = Set(10, 11, 100)
 set.sum                           // Int = 121
 
 // is element in set?
-set(100                           // Boolean = true
+set(100)                          // Boolean = true
 set contains 100                  // same as above
-
+set.contains(100)                 // same as above
 set(20)                           // Boolean = false
 
 // add another set
