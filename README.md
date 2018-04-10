@@ -519,6 +519,7 @@ numbers map (_ + 1) sortWith (_ > _) 	// scala.collection.immutable.IndexedSeq[I
 "15.2".toFloat			// Float = 15.2
 (1 to 3).toSet			// Set[Int] = Set(1, 2, 3)
 (1 to 3).toList			// List[Int] = List(1, 2, 3)
+(1 to 6).toArray    // Array[Int] = Array(1, 2, 3, 4, 5, 6)
 </pre>
 
 
