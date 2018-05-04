@@ -418,6 +418,12 @@ val c = a ::: b       // List[Int] = List(1, 2, 3, 4)
 
 // prepend to an immutable list
 val d = 0 :: c        // List[Int] = List(0, 1, 2, 3, 4)
+
+// flatten of multiple lists
+val names1 = List("tim", "bob", "fred", "jan")
+val names2 = List("sal", "jed", "sam")
+val names = List(names1, names2)    // list of lists:   List[List[String]] = List(List(tim, bob, fred, jan), List(sal, jed, sam))
+names.flatten                       // hierarchy flattened:   List[String] = List(tim, bob, fred, jan, sal, jed, sam)
 </pre>
 
 
@@ -493,6 +499,12 @@ set(20)                           // Boolean = false
 
 // add another set
 set ++ Set(20,30,40)              // Set[Int] = Set(10, 20, 11, 40, 30, 100)
+
+// flatten of multiple sets
+val names1 = Set("tim", "bob", "fred", "jan")
+val names2 = Set("sal", "jed", "sam")
+val names = Set(names1, names2)     // set of sets:   Set[Set[String]] = Set(Set(tim, bob, fred, jan), Set(sal, jed, sam))
+names.flatten                       // hierarchy flattened:   Set[String] = Set(sal, fred, tim, sam, bob, jed, jan)
 </pre>
 
 
